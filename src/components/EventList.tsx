@@ -15,6 +15,7 @@ import {
 import { Calendar, Clock, Plus, Trash2 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { useToast } from "@/hooks/use-toast";
+import BigCalendar from "./BigCalendar";
 
 export function EventList() {
   const [events, setEvents] = useState<CalendarEvent[]>([]);
@@ -124,6 +125,8 @@ export function EventList() {
           ))}
         </div>
       )}
+
+      <BigCalendar events={events} />
     </div>
   );
 }
